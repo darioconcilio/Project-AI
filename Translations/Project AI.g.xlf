@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Project AI">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 3180531025 - Method 3050346346 - NamedType 1036247977" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Token limit exceeded</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Project Copilot - Method Chat - NamedType MaxModelRequestTokensErr</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 4294827418 - EnumValue 2236016807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
+          <source>Project AI</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Project Cap. Ext. - EnumValue ProjectAI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - NamedType 3739731429" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generating with Copilot...</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType GeneratingTextDialogTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - NamedType 64394730" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong. Please try again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType SomethingWentWrongErr</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - NamedType 3929800833" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong. Please try again. The latest error is: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Last Error Message</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType SomethingWentWrongWithLatestErr</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Control 2161174655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Task Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control JobTaskLinesSubform - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Control 1564549987 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Describe the project you want to create with Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control ProjectDescriptionField - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard the Project proposed by Dynamics 365 Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Cancel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard it</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Cancel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate project structure with Dynamics 365 Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Generate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Generate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save the Project proposed by Dynamics 365 Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 2388911040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate the Project proposed by Dynamics 365 Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Regenerate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Action 2388911040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Regenerate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4087887968 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
+          <source>Lets Copilot generate a draft project based on your description.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4087887968 - Action 939458681 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
+          <source>Draft with Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1852189237 - Method 1666699147 - NamedType 1415158908" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Description of task</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Project Utilities - Method GetActivitiesSuggestion - NamedType StartTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1852189237 - Method 1666699147 - NamedType 3692234337" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Description of task</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Project Utilities - Method GetActivitiesSuggestion - NamedType EndTxt</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

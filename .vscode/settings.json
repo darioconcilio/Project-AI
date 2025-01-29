@@ -1,0 +1,17 @@
+{
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [
+        "${CodeCop}",
+        "${UICop}",
+        "${PerTenantExtensionCop}",
+        "${analyzerFolder}BusinessCentral.LinterCop.dll"
+    ],
+    "linterCop.autoDownload": true,
+    "linterCop.repositories": [
+        {
+            "url": "https://github.com/StefanMaron/BusinessCentral.LinterCop",
+            "shortName": "BcLntr",
+            "fileName": "BusinessCentral.LinterCop.dll"
+        }
+    ]
+}
