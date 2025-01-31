@@ -3,7 +3,7 @@ namespace ProjectAI.Capabilities;
 using System.AI;
 using ProjectAI.Enums;
 
-codeunit 60100 "Capabilities.Codeunit"
+codeunit 60100 "Capabilities"
 {
     Subtype = Install;
     InherentEntitlements = X;

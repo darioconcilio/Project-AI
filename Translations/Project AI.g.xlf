@@ -88,6 +88,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 4087887968 - Action 939458681 - Method 1377591017 - NamedType 2938802992" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 4087887968">
+          <source>Do you want delete current records</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Method OnAction - NamedType EmptyCurrentRecordsQst</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1852189237 - Method 1666699147 - NamedType 1415158908" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start %1</source>
           <note from="Developer" annotates="general" priority="2">%1 = Description of task</note>

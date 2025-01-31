@@ -41,7 +41,7 @@ codeunit 60102 "Project Copilot"
                                      ApiKey);
 
         //Numero massimo di token da utilizzare
-        AOAIChatCompletionParams.SetMaxTokens(5000);
+        AOAIChatCompletionParams.SetMaxTokens(9000);
         AOAIChatCompletionParams.SetJsonMode(true);
 
         //Livello di "intelligenza"

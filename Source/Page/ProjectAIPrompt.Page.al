@@ -124,16 +124,39 @@ page 60100 "Project AI Prompt"
         ProgressDialog.Open(GeneratingTextDialogTxt);
         ProjectUtilities.GetActivitiesSuggestion(Rec, InputProjectDescription, TempJobTask);
 
-        CurrPage.JobTaskLinesSubform.Page.Load(TempJobTask);
+        CurrPage.JobTaskLinesSubform.Page.ReadFrom(TempJobTask);
 
+        /*
         if GetLastErrorText() = '' then
             Error(SomethingWentWrongErr)
         else
             Error(SomethingWentWrongWithLatestErr, GetLastErrorText());
+            */
+    end;
+
+    trigger OnQueryClosePage(CloseAction: Action): Boolean
+    begin
+        if CloseAction = CloseAction::OK then
+            CurrPage.JobTaskLinesSubform.Page.WriteTo(TempResultJobTask);
+    end;
+
+    procedure WriteTo(var TempJobTaskToWrite: Record "Job Task" temporary)
+    begin
+        TempResultJobTask.Reset();
+
+        if TempResultJobTask.FindSet() then
+            repeat
+
+                TempJobTaskToWrite.Init();
+                TempJobTaskToWrite.TransferFields(TempResultJobTask);
+                TempJobTaskToWrite.Insert(false);
+
+            until TempResultJobTask.Next() = 0;
     end;
 
     //Variabili
     var
+        TempResultJobTask: Record "Job Task" temporary;
         InputProjectDescription: Text;
         GeneratingTextDialogTxt: Label 'Generating with Copilot...';
         SomethingWentWrongErr: Label 'Something went wrong. Please try again.';

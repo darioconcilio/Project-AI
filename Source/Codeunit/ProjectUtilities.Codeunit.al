@@ -103,12 +103,12 @@ codeunit 60103 "Project Utilities"
             TempJobTask."Job Task Type" := TempJobTask."Job Task Type"::"Begin-Total";
             TempJobTask.Insert(false);
 
-            if SubTaskJsonObject.Get('subTasks', SubTasksJsonToken) then
+            if TaskJsonObject.Get('subTasks', SubTasksJsonToken) then
                 foreach SubTaskJsonToken in SubTasksJsonToken.AsArray() do begin
 
                     SubTaskJsonObject := SubTaskJsonToken.AsObject();
 
-                    JobSubTaskNo := GetIntToken(TaskJsonObject, 'no');
+                    JobSubTaskNo := GetIntToken(SubTaskJsonObject, 'no');
 
                     TempJobTask.Init();
                     TempJobTask."Job No." := Job."No.";
