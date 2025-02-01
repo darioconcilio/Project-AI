@@ -2,6 +2,7 @@ namespace ProjectAI.Copilot;
 
 using System.AI;
 using ProjectAI.Capabilities;
+using ProjectAI.ProjectAI;
 using ProjectAI.Enums;
 
 codeunit 60102 "Project Copilot"

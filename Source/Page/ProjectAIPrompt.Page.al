@@ -1,13 +1,12 @@
 namespace ProjectAI.ProjectAI;
 using ProjectAI.Utilities;
 using Microsoft.Projects.Project.Job;
+using Microsoft.Projects.Project.Planning;
 
 page 60100 "Project AI Prompt"
 {
     PageType = PromptDialog;
     Extensible = false; //Obbligatorio
-    SourceTable = Job;
-    SourceTableTemporary = true;
 
     ApplicationArea = All;
     UsageCategory = Administration;
@@ -43,7 +42,7 @@ page 60100 "Project AI Prompt"
         /// </summary>
         area(Content)
         {
-            part(JobTaskLinesSubform; "Job Task Lines Subform")
+            part(ProjectAIResponseSubpage; "Project AI Response")
             {
                 Caption = 'Job Task Lines';
                 ShowFilter = false;
@@ -57,7 +56,11 @@ page 60100 "Project AI Prompt"
         /// </summary>
         area(PromptOptions)
         {
-
+            field(SimulationBudget; SimulationBudget)
+            {
+                Caption = 'Simulation Budget';
+                ToolTip = 'Specifies if you want taht Copilot simulates budget for job tasks.';
+            }
         }
 
 
@@ -73,7 +76,62 @@ page 60100 "Project AI Prompt"
         /// </summary> 
         area(PromptGuide)
         {
+            action(PrepareProjectTasks)
+            {
+                ApplicationArea = All;
+                Caption = 'Create a project';
 
+                trigger OnAction()
+                var
+                    PromptSuggestionTxt: Label 'Create project about [topic] for [result], I need to create all phases of process';
+                begin
+                    InputProjectDescription := PromptSuggestionTxt;
+                end;
+            }
+
+            // Group of actions
+
+            group(Examples)
+            {
+                action(Gardening)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Gardening software';
+
+                    trigger OnAction()
+                    var
+                        PromptSuggestionTxt: Label 'Create a plan for the design of a garden, it must also have a larder of all the native plants I can use in Europe. I am not familiar with the sector, so I will have to conduct interviews with specialists in the field';
+                    begin
+                        InputProjectDescription := PromptSuggestionTxt;
+                    end;
+                }
+
+                action(RentAuto)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Car rental software';
+
+                    trigger OnAction()
+                    var
+                        PromptSuggestionTxt: Label 'I have to develop a software for the management of a car rental, I need customer support to understand the dynamics and criticalities of the sector';
+                    begin
+                        InputProjectDescription := PromptSuggestionTxt;
+                    end;
+                }
+            }
+
+            action(OrganizeWorkshop)
+            {
+                ApplicationArea = All;
+                Caption = 'Organize a workshop';
+
+                trigger OnAction()
+                var
+                    PromptSuggestionTxt: Label 'I have to organise a business event, I have to set up all the preparatory stages, those during the event and after the event to get potential clients interested in my services';
+                begin
+                    InputProjectDescription := PromptSuggestionTxt;
+                end;
+            }
         }
 
         /// <summary>
@@ -115,6 +173,12 @@ page 60100 "Project AI Prompt"
         }
     }
 
+    procedure SetJob(Job: Record Job)
+    begin
+        //Server solo per avere le info
+        TempCurrentJob.TransferFields(Job);
+    end;
+
     local procedure RunGeneration()
     var
         TempJobTask: Record "Job Task" temporary;
@@ -122,28 +186,21 @@ page 60100 "Project AI Prompt"
         ProgressDialog: Dialog;
     begin
         ProgressDialog.Open(GeneratingTextDialogTxt);
-        ProjectUtilities.GetActivitiesSuggestion(Rec, InputProjectDescription, TempJobTask);
+        ProjectUtilities.GetActivitiesSuggestion(TempCurrentJob, InputProjectDescription, TempJobTask, TempJobPlanningLine, SimulationBudget);
 
-        CurrPage.JobTaskLinesSubform.Page.ReadFrom(TempJobTask);
-
-        /*
-        if GetLastErrorText() = '' then
-            Error(SomethingWentWrongErr)
-        else
-            Error(SomethingWentWrongWithLatestErr, GetLastErrorText());
-            */
+        CurrPage.ProjectAIResponseSubpage.Page.ReadFrom(TempJobTask);
     end;
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     begin
         if CloseAction = CloseAction::OK then
-            CurrPage.JobTaskLinesSubform.Page.WriteTo(TempResultJobTask);
+            CurrPage.ProjectAIResponseSubpage.Page.WriteTo(TempResultJobTask);
     end;
 
-    procedure WriteTo(var TempJobTaskToWrite: Record "Job Task" temporary)
+    procedure WriteTo(var TempJobTaskToWrite: Record "Job Task" temporary; var TempJobPlanningLineToWrite: Record "Job Planning Line" temporary)
     begin
-        TempResultJobTask.Reset();
 
+        TempResultJobTask.Reset();
         if TempResultJobTask.FindSet() then
             repeat
 
@@ -152,13 +209,24 @@ page 60100 "Project AI Prompt"
                 TempJobTaskToWrite.Insert(false);
 
             until TempResultJobTask.Next() = 0;
+
+        TempJobPlanningLine.Reset();
+        if TempJobPlanningLine.FindSet() then
+            repeat
+
+                TempJobPlanningLineToWrite.Init();
+                TempJobPlanningLineToWrite.TransferFields(TempJobPlanningLine);
+                TempJobPlanningLineToWrite.Insert(false);
+
+            until TempJobPlanningLine.Next() = 0;
     end;
 
     //Variabili
     var
+        TempCurrentJob: Record Job temporary;
         TempResultJobTask: Record "Job Task" temporary;
+        TempJobPlanningLine: Record "Job Planning Line" temporary;
         InputProjectDescription: Text;
         GeneratingTextDialogTxt: Label 'Generating with Copilot...';
-        SomethingWentWrongErr: Label 'Something went wrong. Please try again.';
-        SomethingWentWrongWithLatestErr: Label 'Something went wrong. Please try again. The latest error is: %1', Comment = '%1 = Last Error Message';
+        SimulationBudget: Enum "Simulation Prompt Options";
 }

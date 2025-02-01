@@ -1,185 +1,203 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="en-US" original="Project AI">
+  <file datatype="xml" source-language="en-US" target-language="it-IT" original="Project AI">
     <body>
       <group id="body">
         <trans-unit id="Codeunit 3180531025 - Method 3050346346 - NamedType 1036247977" size-unit="char" translate="yes" xml:space="preserve">
           <source>Token limit exceeded</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Limite di token superato</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Project Copilot - Method Chat - NamedType MaxModelRequestTokensErr</note>
         </trans-unit>
         <trans-unit id="EnumExtension 4294827418 - EnumValue 2236016807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
           <source>Project AI</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Progetto AI</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Project Cap. Ext. - EnumValue ProjectAI - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - NamedType 3739731429" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generating with Copilot...</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Generazione con Copilot...</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType GeneratingTextDialogTxt</note>
         </trans-unit>
-        <trans-unit id="Page 890039283 - Control 4220376491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 890039283 - NamedType 64394730" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong. Please try again.</source>
+          <target state="translated">Qualcosa è andato storto. Riprova.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType SomethingWentWrongErr</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - NamedType 3929800833" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong. Please try again. The latest error is: %1</source>
+          <target state="translated">Qualcosa è andato storto. Riprova. L'errore più recente è: %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Last Error Message</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType SomethingWentWrongWithLatestErr</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Control 2161174655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Task Lines</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control ProjectAIResponseSubpage - Property Caption</note>
+          <target state="translated">Righe task progetto</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control JobTaskLinesSubform - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Control 1564549987 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Describe the project you want to create with Copilot</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Descrivi il progetto che desideri creare con Copilot</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control ProjectDescriptionField - Property InstructionalText</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Control 1061653138 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies if you want taht Copilot simulates budget for job tasks.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Specifica se si desidera che Copilot simuli il budget per le attività di processo.</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control SimulationBudget - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Control 1061653138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Simulation Budget</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Budget di simulazione</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control SimulationBudget - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 890039283 - Control 1061653138 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nothing,Budget</source>
+          <target state="translated">Niente,Bilancio</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control SimulationBudget - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 3074584437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gardening software</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Software per il giardinaggio</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Gardening - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 3074584437 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
           <source>Create a plan for the design of a garden, it must also have a larder of all the native plants I can use in Europe. I am not familiar with the sector, so I will have to conduct interviews with specialists in the field</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Creare un piano per la progettazione di un giardino, deve avere anche una dispensa di tutte le piante autoctone che posso usare in Europa. Non ho dimestichezza con il settore, quindi dovrò condurre colloqui con specialisti del settore</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Gardening - Method OnAction - NamedType PromptSuggestionTxt</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 1926913502 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car rental software</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Software per il noleggio auto</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action RentAuto - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 1926913502 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
           <source>I have to develop a software for the management of a car rental, I need customer support to understand the dynamics and criticalities of the sector</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Devo sviluppare un software per la gestione di un noleggio auto, ho bisogno di un supporto al cliente per capire le dinamiche e le criticità del settore</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action RentAuto - Method OnAction - NamedType PromptSuggestionTxt</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2488681418 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Organize a workshop</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Organizza un workshop</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action OrganizeWorkshop - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2488681418 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
           <source>I have to organise a business event, I have to set up all the preparatory stages, those during the event and after the event to get potential clients interested in my services</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Devo organizzare un evento aziendale, devo allestire tutte le fasi preparatorie, quelle durante e dopo l'evento per far interessare i potenziali clienti ai miei servizi</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action OrganizeWorkshop - Method OnAction - NamedType PromptSuggestionTxt</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 3949361542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Create a project</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Creare un progetto</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action PrepareProjectTasks - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 3949361542 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
           <source>Create project about [topic] for [result], I need to create all phases of process</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Creare un progetto su [argomento] per [risultato], ho bisogno di creare tutte le fasi del processo</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action PrepareProjectTasks - Method OnAction - NamedType PromptSuggestionTxt</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discard the Project proposed by Dynamics 365 Copilot.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Scartare il progetto proposto da Dynamics 365 Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Cancel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discard it</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Scartalo</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Cancel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generate project structure with Dynamics 365 Copilot.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Genera la struttura del progetto con Dynamics 365 Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Generate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generate</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Genera</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Generate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Save the Project proposed by Dynamics 365 Copilot.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Salva il progetto proposto da Dynamics 365 Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action OK - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Keep it</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tienilo</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action OK - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2388911040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Regenerate the Project proposed by Dynamics 365 Copilot.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Rigenerare il progetto proposto da Dynamics 365 Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Regenerate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 2388911040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Regenerate</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Rigenera</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Regenerate - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4215927978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Project AI Response</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4215927978 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a description of the project task. You can enter anything that is meaningful in describing the task. The description is copied and used in descriptions on the project planning line.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Description - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4215927978 - Control 1908272084 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of the related project.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Job No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4215927978 - Control 561421623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of the related project task.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Job Task No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4215927978 - Control 395609334 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the purpose of the account. Newly created accounts are automatically assigned the Posting account type, but you can change this. Choose the field to select one of the following five options:</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Job Task Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4215927978 - Control 478049462 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies an interval or a list of project task numbers.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Totaling - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 4087887968 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
           <source>Lets Copilot generate a draft project based on your description.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Consente a Copilot di generare una bozza di progetto in base alla descrizione.</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 4087887968 - Action 939458681 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
           <source>Draft with Copilot</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Bozza con Copilot</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4087887968 - Action 939458681 - Method 1377591017 - NamedType 2938802992" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 4087887968">
           <source>Do you want delete current records</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Vuoi eliminare i record correnti</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Method OnAction - NamedType EmptyCurrentRecordsQst</note>
         </trans-unit>
         <trans-unit id="Enum 200093185 - EnumValue 4030203231 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Budget</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Budget</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Simulation Prompt Options - EnumValue Budget - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 200093185 - EnumValue 834450047 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nothing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Niente</target>
+          <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Simulation Prompt Options - EnumValue Nothing - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 1852189237 - Method 1666699147 - NamedType 1415158908" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start %1</source>
+          <target state="translated">Inizio %1</target>
           <note from="Developer" annotates="general" priority="2">%1 = Description of task</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Project Utilities - Method GetActivitiesSuggestion - NamedType StartTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 1852189237 - Method 1666699147 - NamedType 3692234337" size-unit="char" translate="yes" xml:space="preserve">
           <source>End %1</source>
+          <target state="translated">Fine %1</target>
           <note from="Developer" annotates="general" priority="2">%1 = Description of task</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Project Utilities - Method GetActivitiesSuggestion - NamedType EndTxt</note>
         </trans-unit>
