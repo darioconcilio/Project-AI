@@ -1,12 +1,9 @@
 namespace ProjectAI.ProjectAI;
 
 using Microsoft.Projects.Project.Job;
-using System.Utilities;
-using Microsoft.Projects.Project.Planning;
 
-pageextension 60101 "Job Card Ext." extends "Job Card"
+pageextension 60102 "Job List Ext" extends "Job List"
 {
-
     actions
     {
         addfirst(Category_New)

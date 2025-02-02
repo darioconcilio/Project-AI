@@ -15,29 +15,71 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Project Cap. Ext. - EnumValue ProjectAI - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3260455244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>projectAPI</source>
+          <target state="translated">projectAPI</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Descrizione</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 560950674 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project No.</source>
+          <target state="translated">Nr. progetto</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control jobNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 1545434285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Task No.</source>
+          <target state="translated">Attività di progetto n.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control jobTaskNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 4169596702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Task Type</source>
+          <target state="translated">Tipo di attività del progetto</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control jobTaskType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 721229888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Budget (Total Cost)</source>
+          <target state="translated">Budget (costo totale)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control scheduleTotalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 3812384302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Budget (Total Price)</source>
+          <target state="translated">Budget (Prezzo totale)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control scheduleTotalPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 2755320320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Actual (Total Cost)</source>
+          <target state="translated">Effettivo (costo totale)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control usageTotalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3260455244 - Control 3790213230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Actual (Total Price)</source>
+          <target state="translated">Effettivo (prezzo totale)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project Activity API - Control usageTotalPrice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 890039283 - NamedType 3739731429" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generating with Copilot...</source>
           <target state="translated">Generazione con Copilot...</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType GeneratingTextDialogTxt</note>
         </trans-unit>
-        <trans-unit id="Page 890039283 - NamedType 64394730" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Something went wrong. Please try again.</source>
-          <target state="translated">Qualcosa è andato storto. Riprova.</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType SomethingWentWrongErr</note>
-        </trans-unit>
-        <trans-unit id="Page 890039283 - NamedType 3929800833" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Something went wrong. Please try again. The latest error is: %1</source>
-          <target state="translated">Qualcosa è andato storto. Riprova. L'errore più recente è: %1</target>
-          <note from="Developer" annotates="general" priority="2">%1 = Last Error Message</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - NamedType SomethingWentWrongWithLatestErr</note>
-        </trans-unit>
-        <trans-unit id="Page 890039283 - Control 2161174655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 890039283 - Control 4220376491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Job Task Lines</source>
           <target state="translated">Righe task progetto</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control JobTaskLinesSubform - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control ProjectAIResponseSubpage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Control 1564549987 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Describe the project you want to create with Copilot</source>
@@ -56,12 +98,6 @@
           <target state="translated">Budget di simulazione</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control SimulationBudget - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 890039283 - Control 1061653138 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Nothing,Budget</source>
-          <target state="translated">Niente,Bilancio</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Control SimulationBudget - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Page 890039283 - Action 3074584437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gardening software</source>
@@ -159,6 +195,102 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Prompt - Action Regenerate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 4215927978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project AI Response</source>
+          <target state="translated">Risposta dell'intelligenza artificiale del progetto</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4215927978 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a description of the project task. You can enter anything that is meaningful in describing the task. The description is copied and used in descriptions on the project planning line.</source>
+          <target state="translated">Specifica una descrizione dell'attività del progetto. È possibile immettere qualsiasi elemento significativo nella descrizione dell'attività. La descrizione viene copiata e utilizzata nelle descrizioni nella riga di pianificazione del progetto.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4215927978 - Control 1908272084 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the related project.</source>
+          <target state="translated">Specifica il numero del progetto correlato.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Job No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4215927978 - Control 561421623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the related project task.</source>
+          <target state="translated">Specifica il numero dell'attività di progetto correlata.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Job Task No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4215927978 - Control 395609334 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the purpose of the account. Newly created accounts are automatically assigned the Posting account type, but you can change this. Choose the field to select one of the following five options:</source>
+          <target state="translated">Specifica lo scopo dell'account. Ai conti appena creati viene assegnato automaticamente il tipo di conto di registrazione, ma è possibile modificarlo. Scegliere il campo per selezionare una delle cinque opzioni seguenti:</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Job Task Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4215927978 - Control 478049462 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies an interval or a list of project task numbers.</source>
+          <target state="translated">Specifica un intervallo o un elenco di numeri di attività del progetto.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project AI Response - Control Totaling - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>projectAPI</source>
+          <target state="translated">projectAPI</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 3983874935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Customer No.</source>
+          <target state="translated">Fatturare a - Nr. Cliente</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control billToCustomerNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 1734698567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Creation Date</source>
+          <target state="translated">Data di creazione</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control creationDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Descrizione</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 2762750464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description 2</source>
+          <target state="translated">Descrizione 2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control description2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 2786197837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target state="translated">Data fine</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control endingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 3179096107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">No.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control no - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 2825405939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Person Responsible</source>
+          <target state="translated">Persona responsabile</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control personResponsible - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 1751904704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target state="translated">Data Iniziale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control startingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="translated">Stato</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control status - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4087887968 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
           <source>Lets Copilot generate a draft project based on your description.</source>
           <target state="translated">Consente a Copilot di generare una bozza di progetto in base alla descrizione.</target>
@@ -171,11 +303,17 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4087887968 - Action 939458681 - Method 1377591017 - NamedType 2938802992" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 4087887968">
-          <source>Do you want delete current records</source>
-          <target state="translated">Vuoi eliminare i record correnti</target>
+        <trans-unit id="PageExtension 612656320 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2273701615">
+          <source>Lets Copilot generate a draft project based on your description.</source>
+          <target state="translated">Consente a Copilot di generare una bozza di progetto in base alla descrizione.</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Method OnAction - NamedType EmptyCurrentRecordsQst</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job List Ext - Action GenerateCopilotAction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 612656320 - Action 939458681 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2273701615">
+          <source>Draft with Copilot</source>
+          <target state="translated">Bozza con Copilot</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job List Ext - Action GenerateCopilotAction - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 200093185 - EnumValue 4030203231 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Budget</source>
