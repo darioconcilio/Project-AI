@@ -16,8 +16,8 @@ page 60102 "Project API"
 
     ODataKeyFields = "No.";
 
-    Editable = false;
-    DataAccessIntent = ReadOnly; //Permette di utilizzare la replica secondaria del database di BC
+    //Editable = false;
+    //DataAccessIntent = ReadOnly; //Permette di utilizzare la replica secondaria del database di BC
 
     layout
     {
@@ -25,6 +25,10 @@ page 60102 "Project API"
         {
             repeater(General)
             {
+                field(SystemId; Rec.SystemId)
+                {
+                    Caption = 'SystemId';
+                }
                 field(no; Rec."No.")
                 {
                     Caption = 'No.';
@@ -60,6 +64,11 @@ page 60102 "Project API"
                 field(personResponsible; Rec."Person Responsible")
                 {
                     Caption = 'Person Responsible';
+                }
+                part(projectActivities; "Project Activity API")
+                {
+                    Caption = 'Project Activities';
+                    SubPageLink = "Job No." = field("No.");
                 }
             }
         }
