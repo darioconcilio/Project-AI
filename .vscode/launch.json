@@ -8,10 +8,8 @@
             "environmentType": "Sandbox",
             "environmentName": "Dev",
             "tenant": "06e27de0-d0ea-4edf-be00-c9cce6a6e614",
-            "startupObjectId": 89,
-            "startupObjectType": "Page",
             "breakOnError": "All",
-            "launchBrowser": true,
+            "launchBrowser": false,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true
         },
@@ -21,7 +19,7 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "DEV",
-            "sessionId": 39033,
+            "sessionId": 60117,
             "breakOnNext": "WebClient",
             "breakOnError": "ExcludeTry",
             "tenant": "06e27de0-d0ea-4edf-be00-c9cce6a6e614"

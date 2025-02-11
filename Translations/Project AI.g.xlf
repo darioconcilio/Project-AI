@@ -233,6 +233,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control personResponsible - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 387286474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Activities</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control projectActivities - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1945188399 - Control 1751904704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Starting Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -242,6 +247,11 @@
           <source>Status</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1945188399 - Control 1367528460 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SystemId</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Project API - Control SystemId - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4087887968 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
           <source>Lets Copilot generate a draft project based on your description.</source>
