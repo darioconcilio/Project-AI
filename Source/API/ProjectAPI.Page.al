@@ -76,10 +76,11 @@ page 60102 "Project API"
 
 
     [ServiceEnabled]
-    procedure SetBlocked(var actionContext: WebServiceActionContext; JobBlocked: Enum "Job Blocked")
+    procedure BlockPosting(var actionContext: WebServiceActionContext)
     begin
-        Rec.Validate(Blocked, JobBlocked);
-        Rec.Modify(true);
+        Rec.SetBlocked("Job Blocked"::Posting);
+
+        actionContext.SetResultCode(WebServiceActionResultCode::Updated);
     end;
 
 }

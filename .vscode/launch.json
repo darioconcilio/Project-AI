@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Crystal Cave (Sandbox - Dev)",
             "request": "launch",
@@ -19,8 +20,7 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "DEV",
-            "sessionId": 60117,
-            "breakOnNext": "WebClient",
+            "breakOnNext":"WebServiceClient",
             "breakOnError": "ExcludeTry",
             "tenant": "06e27de0-d0ea-4edf-be00-c9cce6a6e614"
         }
