@@ -11,9 +11,10 @@ page 60100 "Project AI Prompt"
     ApplicationArea = All;
     UsageCategory = Administration;
 
-    //PromptMode = Content;
+    PromptMode = Prompt; //Default
     //PromptMode = Content; //attiva la generazione dell'output dell'interazione con Copilot
     PromptMode = Generate; //mostra l'output dell'interazione com Copilot
+
 
     IsPreview = true; //true = anteprima della funzionalità (indica all'utente che l'esperienza è sperimentale...)
 
