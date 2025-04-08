@@ -27,6 +27,7 @@ codeunit 60100 "Capabilities"
         CopilotCapability: Codeunit "Copilot Capability";
         LearnMoreUrlTxt: Label 'https://www.vitadasviluppatore.it/ProjectAI', Locked = true;
     begin
+
         if not CopilotCapability.IsCapabilityRegistered(Enum::"Copilot Capability"::ProjectAI) then
             CopilotCapability.RegisterCapability(Enum::"Copilot Capability"::ProjectAI,
                                                  Enum::"Copilot Availability"::"Generally Available",

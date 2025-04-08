@@ -18,35 +18,35 @@ codeunit 60103 "Project Utilities"
         SubTaskJsonToken: JsonToken;
         SubTaskJsonObject: JsonObject;
 
-    local procedure GetTextToken(CountryToAdd: JsonObject; KeyName: Text): Text
-    var
-        FieldJsonToken: JsonToken;
-    begin
-        if CountryToAdd.Get(KeyName, FieldJsonToken) then
-            exit(FieldJsonToken.AsValue().AsText());
+    // local procedure GetTextToken(CountryToAdd: JsonObject; KeyName: Text): Text
+    // var
+    //     FieldJsonToken: JsonToken;
+    // begin
+    //     if CountryToAdd.Get(KeyName, FieldJsonToken) then
+    //         exit(FieldJsonToken.AsValue().AsText());
 
-        exit('');
-    end;
+    //     exit('');
+    // end;
 
-    local procedure GetDecimalToken(CountryToAdd: JsonObject; KeyName: Text): Decimal
-    var
-        FieldJsonToken: JsonToken;
-    begin
-        if CountryToAdd.Get(KeyName, FieldJsonToken) then
-            exit(FieldJsonToken.AsValue().AsDecimal());
+    // local procedure GetDecimalToken(CountryToAdd: JsonObject; KeyName: Text): Decimal
+    // var
+    //     FieldJsonToken: JsonToken;
+    // begin
+    //     if CountryToAdd.Get(KeyName, FieldJsonToken) then
+    //         exit(FieldJsonToken.AsValue().AsDecimal());
 
-        exit(0);
-    end;
+    //     exit(0);
+    // end;
 
-    local procedure GetIntToken(CountryToAdd: JsonObject; KeyName: Text): Integer
-    var
-        FieldJsonToken: JsonToken;
-    begin
-        if CountryToAdd.Get(KeyName, FieldJsonToken) then
-            exit(FieldJsonToken.AsValue().AsInteger());
+    // local procedure GetIntToken(CountryToAdd: JsonObject; KeyName: Text): Integer
+    // var
+    //     FieldJsonToken: JsonToken;
+    // begin
+    //     if CountryToAdd.Get(KeyName, FieldJsonToken) then
+    //         exit(FieldJsonToken.AsValue().AsInteger());
 
-        exit(0);
-    end;
+    //     exit(0);
+    // end;
 
     local procedure GetSystemPrompt(SimulationOption: Enum "Simulation Prompt Options") SystemPrompt: Text
     begin
@@ -149,12 +149,16 @@ codeunit 60103 "Project Utilities"
 
             TaskJsonObject := TaskJsonToken.AsObject();
 
-            JobTaskNo := GetIntToken(TaskJsonObject, 'taskNo');
+            //JobTaskNo := GetIntToken(TaskJsonObject, 'taskNo');
+            JobTaskNo := TaskJsonObject.GetInteger('taskNo', true);
 
             TempJobTask.Init();
             TempJobTask."Job No." := TempJob."No.";
             Evaluate(TempJobTask."Job Task No.", Format(JobTaskNo, 20));
-            Evaluate(TempJobTask.Description, Format(StrSubstNo(StartTxt, GetTextToken(TaskJsonObject, 'description')), 100));
+
+            //Evaluate(TempJobTask.Description, Format(StrSubstNo(StartTxt, GetTextToken(TaskJsonObject, 'description')), 100));
+            Evaluate(TempJobTask.Description, Format(StrSubstNo(StartTxt, TaskJsonObject.GetText('description', true)), 100));
+
             TempJobTask."Job Task Type" := TempJobTask."Job Task Type"::"Begin-Total";
             TempJobTask.Insert(false);
 
@@ -163,12 +167,16 @@ codeunit 60103 "Project Utilities"
 
                     SubTaskJsonObject := SubTaskJsonToken.AsObject();
 
-                    JobSubTaskNo := GetIntToken(SubTaskJsonObject, 'no');
+                    //JobSubTaskNo := GetIntToken(SubTaskJsonObject, 'no');
+                    JobSubTaskNo := SubTaskJsonObject.GetInteger('no', true);
 
                     TempJobTask.Init();
                     TempJobTask."Job No." := TempJob."No.";
                     Evaluate(TempJobTask."Job Task No.", Format(JobSubTaskNo, 20));
-                    Evaluate(TempJobTask.Description, Format(GetTextToken(SubTaskJsonObject, 'description'), 100));
+
+                    //Evaluate(TempJobTask.Description, Format(GetTextToken(SubTaskJsonObject, 'description'), 100));
+                    Evaluate(TempJobTask.Description, Format(SubTaskJsonObject.GetText('description', true), 100));
+
                     TempJobTask."Job Task Type" := TempJobTask."Job Task Type"::Posting;
                     TempJobTask.Insert(false);
 
@@ -186,7 +194,8 @@ codeunit 60103 "Project Utilities"
                         GetRandomResource(Resource);
                         TempJobPlanningLine."No." := Resource."No.";
 
-                        Evaluate(TempJobPlanningLine.Quantity, Format(GetDecimalToken(SubTaskJsonObject, 'budget'), 10));
+                        //Evaluate(TempJobPlanningLine.Quantity, Format(GetDecimalToken(SubTaskJsonObject, 'budget'), 10));
+                        Evaluate(TempJobPlanningLine.Quantity, Format(SubTaskJsonObject.GetDecimal('budget', true), 10));
 
                         TempJobPlanningLine.Modify(false);
 
@@ -201,7 +210,10 @@ codeunit 60103 "Project Utilities"
             TempJobTask.Init();
             TempJobTask."Job No." := TempJob."No.";
             Evaluate(TempJobTask."Job Task No.", Format(JobTaskNo, 20));
-            Evaluate(TempJobTask.Description, Format(StrSubstNo(EndTxt, GetTextToken(TaskJsonObject, 'description')), 100));
+
+            //Evaluate(TempJobTask.Description, Format(StrSubstNo(EndTxt, GetTextToken(TaskJsonObject, 'description')), 100));
+            Evaluate(TempJobTask.Description, Format(StrSubstNo(EndTxt, TaskJsonObject.GetText('description', true)), 100));
+
             TempJobTask."Job Task Type" := TempJobTask."Job Task Type"::"End-Total";
             TempJobTask.Insert(false);
 
