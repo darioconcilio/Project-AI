@@ -10,7 +10,7 @@
             "environmentName": "Test-26",
             "tenant": "06e27de0-d0ea-4edf-be00-c9cce6a6e614",
             "breakOnError": "All",
-            "launchBrowser": false,
+            "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true
         }
