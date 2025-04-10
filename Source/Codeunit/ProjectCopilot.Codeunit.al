@@ -42,12 +42,24 @@ codeunit 60102 "Project Copilot"
                                      ApiKey);
 
         //Numero massimo di token da utilizzare
-        AOAIChatCompletionParams.SetMaxTokens(9000);
-        AOAIChatCompletionParams.SetJsonMode(true);
+        AOAIChatCompletionParams.SetMaxTokens(9000); //Numero massimo di token in risposta
+        AOAIChatCompletionParams.SetJsonMode(true); //Risposta in formato json
 
-        //Livello di "intelligenza"
-        AOAIChatCompletionParams.SetTemperature(0.7);
-        //AOAIChatCompletionParams.SetJsonMode(true);
+        //Numero compreso tra -2,0 e 2,0. I valori positivi penalizzano i nuovi token in base alla loro frequenza attuale nel testo, 
+        //riducendo la probabilità che il modello ripeta la stessa riga alla lettera.
+        AOAIChatCompletionParams.SetFrequencyPenalty(0);
+
+        //Numero compreso tra -2,0 e 2,0. I valori positivi penalizzano i nuovi token a seconda che siano già presenti nel testo, 
+        //aumentando la probabilità che il modello tratti nuovi argomenti.
+        AOAIChatCompletionParams.SetPresencePenalty(0);
+
+        //Imposta il numero massimo di messaggi da inviare come cronologia dei messaggi
+        AOAIChatCompletionParams.SetMaxHistory(0);
+
+        //Imposta la temperatura di campionamento da utilizzare, compresa tra 0 e 2. Una temperatura più elevata aumenta 
+        //la probabilità che il token successivo più probabile non venga selezionato. Quando si richiedono dati strutturati, 
+        //impostare la temperatura su 0. Per il parlato umano, 0,7 è un valore tipico.
+        AOAIChatCompletionParams.SetTemperature(0);
 
         AzureOpenAI.SetCopilotCapability(Enum::"Copilot Capability"::ProjectAI);
 
