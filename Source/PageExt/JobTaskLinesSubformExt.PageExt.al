@@ -2,32 +2,25 @@ namespace ProjectAI.ProjectAI;
 
 using Microsoft.Projects.Project.Job;
 
-pageextension 60102 "Job List Ext" extends "Job List"
+pageextension 60103 "Job Task Lines Subform Ext" extends "Job Task Lines Subform"
 {
     actions
     {
-        addfirst(Category_New)
-        {
-            actionref(GenerateCopilotPromoted; GenerateCopilotAction)
-            {
-            }
-        }
-
         addlast(Prompting)
         {
             action(GenerateCopilotAction)
             {
-                Caption = 'Draft with Copilot';
+                Caption = 'Manipulate with Copilot';
                 Image = SparkleFilled;
                 Ellipsis = true;
                 ApplicationArea = All;
-                ToolTip = 'Lets Copilot generate a draft project based on your description.';
+                ToolTip = 'Allows the work line to be manipulated with Copilot.';
 
                 trigger OnAction()
                 var
                     ProjectTool: Codeunit "Project Tools";
                 begin
-                    ProjectTool.GenerateProjectTasks(Rec);
+                    ProjectTool.ManipulateJobTask(Rec);
                     CurrPage.Update(true);
                 end;
             }

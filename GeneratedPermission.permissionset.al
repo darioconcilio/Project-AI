@@ -6,6 +6,6 @@ permissionset 60100 GeneratedPermission
     Permissions = codeunit "AI Settings" = X,
         codeunit Capabilities = X,
         codeunit "Project Copilot" = X,
-        codeunit "Project Utilities" = X,
+        codeunit "Project Gen. Utilities" = X,
         page "Project AI Prompt" = X;
 }

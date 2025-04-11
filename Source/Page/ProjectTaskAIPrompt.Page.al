@@ -3,7 +3,7 @@ using ProjectAI.Utilities;
 using Microsoft.Projects.Project.Job;
 using Microsoft.Projects.Project.Planning;
 
-page 60100 "Project AI Prompt"
+page 60104 "Project Task AI Prompt"
 {
     PageType = PromptDialog;
     Extensible = false; //Obbligatorio
@@ -27,13 +27,13 @@ page 60100 "Project AI Prompt"
         area(Prompt)
         {
             /// <summary>
-            /// L'utente deve inserire l'intento del progetto
+            /// L'utente deve inserire cosa vuole che venga fatto sulla riga selezionata
             /// </summary>
             field(ProjectDescriptionField; InputProjectDescription)
             {
                 ShowCaption = false;
                 MultiLine = true;
-                InstructionalText = 'Describe the project you want to create with Copilot';
+                InstructionalText = 'Describe what you want to be done on the selected line. Puoi chiedere di revisionare il budget del task rispetto allo storico oppure di verificare il tempo necessario per il task in base allo storico.';
             }
         }
 
@@ -41,28 +41,28 @@ page 60100 "Project AI Prompt"
         /// L'area Contenuto è l'uscita del copilota e accetta qualsiasi controllo, ad eccezione dei comandi del Repeater
         /// Questa è la sezione di output che visualizza il contenuto generato
         /// </summary>
-        area(Content)
-        {
-            part(ProjectAIResponseSubpage; "Project AI Response")
-            {
-                Caption = 'Job Task Lines';
-                ShowFilter = false;
-                Editable = true;
-                Enabled = true;
-            }
-        }
+        // area(Content)
+        // {
+        //     part(ProjectAIResponseSubpage; "Project AI Response")
+        //     {
+        //         Caption = 'Job Task Lines';
+        //         ShowFilter = false;
+        //         Editable = true;
+        //         Enabled = true;
+        //     }
+        // }
 
         /// <summary>
         /// L'area PromptOptions è l'area delle opzioni di input e accetta solo campi di Option
         /// </summary>
-        area(PromptOptions)
-        {
-            field(SimulationBudget; SimulationBudget)
-            {
-                Caption = 'Simulation Budget';
-                ToolTip = 'Specifies if you want taht Copilot simulates budget for job tasks.';
-            }
-        }
+        // area(PromptOptions)
+        // {
+        //     field(SimulationBudget; SimulationBudget)
+        //     {
+        //         Caption = 'Simulation Budget';
+        //         ToolTip = 'Specifies if you want taht Copilot simulates budget for job tasks.';
+        //     }
+        // }
 
 
     }
@@ -77,58 +77,27 @@ page 60100 "Project AI Prompt"
         /// </summary> 
         area(PromptGuide)
         {
-            action(PrepareProjectTasks)
+            action(ReviseBudget)
             {
                 ApplicationArea = All;
-                Caption = 'Create a project';
+                Caption = 'Revise budget';
 
                 trigger OnAction()
                 var
-                    PromptSuggestionTxt: Label 'Create project about [topic] for [result], I need to create all phases of process';
+                    PromptSuggestionTxt: Label 'Revise the budget of this task to be in line with the history.';
                 begin
                     InputProjectDescription := PromptSuggestionTxt;
                 end;
             }
 
-            // Group of actions
-
-            group(Examples)
-            {
-                action(Gardening)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Gardening software';
-
-                    trigger OnAction()
-                    var
-                        PromptSuggestionTxt: Label 'Create a plan for the design of a garden, it must also have a larder of all the native plants I can use in Europe. I am not familiar with the sector, so I will have to conduct interviews with specialists in the field';
-                    begin
-                        InputProjectDescription := PromptSuggestionTxt;
-                    end;
-                }
-
-                action(RentAuto)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Car rental software';
-
-                    trigger OnAction()
-                    var
-                        PromptSuggestionTxt: Label 'I have to develop a software for the management of a car rental, I need customer support to understand the dynamics and criticalities of the sector';
-                    begin
-                        InputProjectDescription := PromptSuggestionTxt;
-                    end;
-                }
-            }
-
-            action(OrganizeWorkshop)
+            action(DetailTask)
             {
                 ApplicationArea = All;
-                Caption = 'Organize a workshop';
+                Caption = 'Detail Task';
 
                 trigger OnAction()
                 var
-                    PromptSuggestionTxt: Label 'I have to organise a business event, I have to set up all the preparatory stages, those during the event and after the event to get potential clients interested in my services';
+                    PromptSuggestionTxt: Label 'Approfondisce il task selezionato aggiungento ulteriori sottotask.';
                 begin
                     InputProjectDescription := PromptSuggestionTxt;
                 end;
@@ -144,7 +113,7 @@ page 60100 "Project AI Prompt"
             systemaction(Generate)
             {
                 Caption = 'Generate';
-                ToolTip = 'Generate project structure with Dynamics 365 Copilot.';
+                ToolTip = 'Extend the details of the selected task.';
 
                 trigger OnAction()
                 begin
@@ -154,12 +123,12 @@ page 60100 "Project AI Prompt"
             systemaction(OK)
             {
                 Caption = 'Keep it';
-                ToolTip = 'Save the Project proposed by Dynamics 365 Copilot.';
+                ToolTip = 'Apply the changes suggested by Copilot.';
             }
             systemaction(Cancel)
             {
                 Caption = 'Discard it';
-                ToolTip = 'Discard the Project proposed by Dynamics 365 Copilot.';
+                ToolTip = 'Discard the changes suggested by Copilot.';
             }
             systemaction(Regenerate)
             {
@@ -174,52 +143,52 @@ page 60100 "Project AI Prompt"
         }
     }
 
-    procedure SetJob(Job: Record Job)
-    begin
-        //Server solo per avere le info
-        TempCurrentJob.TransferFields(Job);
-    end;
+    // procedure SetJob(Job: Record Job)
+    // begin
+    //     //Server solo per avere le info
+    //     TempCurrentJob.TransferFields(Job);
+    // end;
 
     local procedure RunGeneration()
     var
         TempJobTask: Record "Job Task" temporary;
-        ProjectUtilities: Codeunit "Project Gen. Utilities";
+        ProjectGenUtilities: Codeunit "Project Gen. Utilities";
         ProgressDialog: Dialog;
     begin
-        ProgressDialog.Open(GeneratingTextDialogTxt);
-        ProjectUtilities.GetActivitiesSuggestion(TempCurrentJob, InputProjectDescription, TempJobTask, TempJobPlanningLine, SimulationBudget);
+        // ProgressDialog.Open(GeneratingTextDialogTxt);
+        // ProjectGenUtilities.GetActivitiesSuggestion(TempCurrentJob, InputProjectDescription, TempJobTask, TempJobPlanningLine, SimulationBudget);
 
-        CurrPage.ProjectAIResponseSubpage.Page.ReadFrom(TempJobTask);
+        // CurrPage.ProjectAIResponseSubpage.Page.ReadFrom(TempJobTask);
     end;
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     begin
-        if CloseAction = CloseAction::OK then
-            CurrPage.ProjectAIResponseSubpage.Page.WriteTo(TempResultJobTask);
+        // if CloseAction = CloseAction::OK then
+        //     CurrPage.ProjectAIResponseSubpage.Page.WriteTo(TempResultJobTask);
     end;
 
     procedure WriteTo(var TempJobTaskToWrite: Record "Job Task" temporary; var TempJobPlanningLineToWrite: Record "Job Planning Line" temporary)
     begin
 
-        TempResultJobTask.Reset();
-        if TempResultJobTask.FindSet() then
-            repeat
+        // TempResultJobTask.Reset();
+        // if TempResultJobTask.FindSet() then
+        //     repeat
 
-                TempJobTaskToWrite.Init();
-                TempJobTaskToWrite.TransferFields(TempResultJobTask);
-                TempJobTaskToWrite.Insert(false);
+        //         TempJobTaskToWrite.Init();
+        //         TempJobTaskToWrite.TransferFields(TempResultJobTask);
+        //         TempJobTaskToWrite.Insert(false);
 
-            until TempResultJobTask.Next() = 0;
+        //     until TempResultJobTask.Next() = 0;
 
-        TempJobPlanningLine.Reset();
-        if TempJobPlanningLine.FindSet() then
-            repeat
+        // TempJobPlanningLine.Reset();
+        // if TempJobPlanningLine.FindSet() then
+        //     repeat
 
-                TempJobPlanningLineToWrite.Init();
-                TempJobPlanningLineToWrite.TransferFields(TempJobPlanningLine);
-                TempJobPlanningLineToWrite.Insert(false);
+        //         TempJobPlanningLineToWrite.Init();
+        //         TempJobPlanningLineToWrite.TransferFields(TempJobPlanningLine);
+        //         TempJobPlanningLineToWrite.Insert(false);
 
-            until TempJobPlanningLine.Next() = 0;
+        //     until TempJobPlanningLine.Next() = 0;
     end;
 
     //Variabili

@@ -6,7 +6,7 @@ using Microsoft.Projects.Project.Planning;
 using Microsoft.Projects.Resources.Resource;
 using Microsoft.HumanResources.Employee;
 
-codeunit 60103 "Project Utilities"
+codeunit 60103 "Project Gen. Utilities"
 {
     var
         ProjectCopilot: Codeunit "Project Copilot";
