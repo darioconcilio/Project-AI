@@ -152,11 +152,11 @@ page 60104 "Project Task AI Prompt"
     local procedure RunGeneration()
     var
         TempJobTask: Record "Job Task" temporary;
-        ProjectGenUtilities: Codeunit "Project Gen. Utilities";
+        ProjectTaskUtilities: Codeunit "Project Task Utilities";
         ProgressDialog: Dialog;
     begin
-        // ProgressDialog.Open(GeneratingTextDialogTxt);
-        // ProjectGenUtilities.GetActivitiesSuggestion(TempCurrentJob, InputProjectDescription, TempJobTask, TempJobPlanningLine, SimulationBudget);
+        ProgressDialog.Open(GeneratingTextDialogTxt);
+        ProjectTaskUtilities.RequestManipulationOnTask(TempJobTask, InputProjectDescription);
 
         // CurrPage.ProjectAIResponseSubpage.Page.ReadFrom(TempJobTask);
     end;

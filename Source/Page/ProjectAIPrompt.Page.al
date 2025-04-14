@@ -183,7 +183,7 @@ page 60100 "Project AI Prompt"
     local procedure RunGeneration()
     var
         TempJobTask: Record "Job Task" temporary;
-        ProjectUtilities: Codeunit "Project Gen. Utilities";
+        ProjectUtilities: Codeunit "Project Tasks Creations";
         ProgressDialog: Dialog;
     begin
         ProgressDialog.Open(GeneratingTextDialogTxt);
