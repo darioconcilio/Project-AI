@@ -4,16 +4,16 @@ permissionset 60100 "Project AI"
     Assignable = true;
     Permissions = codeunit "AI Settings" = X,
         codeunit Capabilities = X,
-        codeunit "Project Copilot" = X,
-        page "Project AI Prompt" = X,
-        codeunit "Detail Task Function Call" = X,
+        codeunit "Toolkit Copilot" = X,
+        page "Job AI Prompt" = X,
+        codeunit "Job Task Function Call" = X,
         codeunit "Json Utilities" = X,
-        codeunit "Project Task Utilities" = X,
-        codeunit "Project Tools" = X,
+        codeunit "Job Task Utilities" = X,
+        codeunit "Job Tools" = X,
         page "Project Activity API" = X,
-        page "Project AI Response" = X,
+        page "Job AI Response" = X,
         page "Project API" = X,
-        page "Project Task AI Prompt" = X,
+        page "Job Task AI Prompt" = X,
         query "Item API" = X,
-        codeunit "Project Gen. Utilities" = X;
+        codeunit "Job Utilities" = X;
 }

@@ -6,10 +6,10 @@ using Microsoft.Projects.Project.Planning;
 using Microsoft.Projects.Resources.Resource;
 using Microsoft.HumanResources.Employee;
 
-codeunit 60103 "Project Gen. Utilities"
+codeunit 60103 "Job Utilities"
 {
     var
-        ProjectCopilot: Codeunit "Project Copilot";
+        ToolkitCopilot: Codeunit "Toolkit Copilot";
         Response: Text;
         TasksJsonArray: JsonArray;
         TaskJsonToken: JsonToken;
@@ -138,7 +138,7 @@ codeunit 60103 "Project Gen. Utilities"
 
         TempJobTask.DeleteAll(false);
 
-        Response := ProjectCopilot.Chat(GetSystemPrompt(SimulateBudget), UserPrompt);
+        Response := ToolkitCopilot.Chat(GetSystemPrompt(SimulateBudget), UserPrompt);
 
         ResponseJsonObject.ReadFrom(Response);
 

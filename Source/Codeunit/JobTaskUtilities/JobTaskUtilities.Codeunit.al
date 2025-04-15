@@ -6,10 +6,10 @@ using Microsoft.Projects.Project.Planning;
 using Microsoft.Projects.Resources.Resource;
 using Microsoft.HumanResources.Employee;
 
-codeunit 60106 "Project Task Utilities"
+codeunit 60106 "Job Task Utilities"
 {
     var
-        ProjectCopilot: Codeunit "Project Copilot";
+        ProjectCopilot: Codeunit "Toolkit Copilot";
         Response: Text;
 
 

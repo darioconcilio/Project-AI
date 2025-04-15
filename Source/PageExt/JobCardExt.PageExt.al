@@ -28,7 +28,7 @@ pageextension 60101 "Job Card Ext." extends "Job Card"
 
                 trigger OnAction()
                 var
-                    ProjectTool: Codeunit "Project Tools";
+                    ProjectTool: Codeunit "Job Tools";
                 begin
                     ProjectTool.GenerateProjectTasks(Rec);
                     CurrPage.Update(true);

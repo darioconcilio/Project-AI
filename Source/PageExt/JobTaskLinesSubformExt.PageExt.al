@@ -18,7 +18,7 @@ pageextension 60103 "Job Task Lines Subform Ext" extends "Job Task Lines Subform
 
                 trigger OnAction()
                 var
-                    ProjectTool: Codeunit "Project Tools";
+                    ProjectTool: Codeunit "Job Tools";
                 begin
                     ProjectTool.ManipulateJobTask(Rec);
                     CurrPage.Update(true);

@@ -25,7 +25,7 @@ pageextension 60102 "Job List Ext" extends "Job List"
 
                 trigger OnAction()
                 var
-                    ProjectTool: Codeunit "Project Tools";
+                    ProjectTool: Codeunit "Job Tools";
                 begin
                     ProjectTool.GenerateProjectTasks(Rec);
                     CurrPage.Update(true);

@@ -1,7 +1,7 @@
 namespace ProjectAI.ProjectAI;
 using Microsoft.Projects.Project.Job;
 
-page 60101 "Project AI Response"
+page 60101 "Job AI Response"
 {
     ApplicationArea = All;
     Caption = 'Project AI Response';

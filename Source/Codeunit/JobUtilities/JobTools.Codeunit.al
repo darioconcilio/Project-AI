@@ -4,7 +4,7 @@ using Microsoft.Projects.Project.Job;
 using Microsoft.Projects.Project.Planning;
 using System.Utilities;
 
-codeunit 60104 "Project Tools"
+codeunit 60104 "Job Tools"
 {
     procedure GenerateProjectTasks(var JobByPage: Record "Job")
     var
@@ -13,7 +13,7 @@ codeunit 60104 "Project Tools"
         TempJobTask: Record "Job Task" temporary;
         TempJobPlanningLine: Record "Job Planning Line" temporary;
         JobTaskIndent: Codeunit "Job Task-Indent";
-        ProjectAIPromptPage: Page "Project AI Prompt";
+        ProjectAIPromptPage: Page "Job AI Prompt";
     begin
         ProjectAIPromptPage.SetJob(JobByPage);
         if ProjectAIPromptPage.RunModal() = Action::OK then begin

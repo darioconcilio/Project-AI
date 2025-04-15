@@ -5,14 +5,17 @@ using ProjectAI.Capabilities;
 using ProjectAI.ProjectAI;
 using ProjectAI.Enums;
 
-codeunit 60102 "Project Copilot"
+codeunit 60102 "Toolkit Copilot"
 {
+    var
+        AOAIChatMessages: Codeunit "AOAI Chat Messages";
+
     procedure Chat(SystemPrompt: Text; ChatUserPrompt: Text) Result: Text
     var
         AzureOpenAI: Codeunit "Azure OpenAI";
         AOAIOperationResponse: Codeunit "AOAI Operation Response";
         AOAIChatCompletionParams: Codeunit "AOAI Chat Completion Params";
-        AOAIChatMessages: Codeunit "AOAI Chat Messages";
+
         AOAIToken: Codeunit "AOAI Token";
 
         AISettings: Codeunit "AI Settings";
@@ -61,7 +64,7 @@ codeunit 60102 "Project Copilot"
         //impostare la temperatura su 0. Per il parlato umano, 0,7 è un valore tipico.
         AOAIChatCompletionParams.SetTemperature(0);
 
-        AzureOpenAI.SetCopilotCapability(Enum::"Copilot Capability"::ProjectAI);
+        AzureOpenAI.SetCopilotCapability(Enum::"Copilot Capability"::JobCopilotAI);
 
         //Esecuzione della chiamata
         SystemTokens := 630;
@@ -102,5 +105,15 @@ codeunit 60102 "Project Copilot"
     local procedure MaxModelRequestTokens(): Integer
     begin
         exit(128000)
+    end;
+
+    procedure AddFunctionCall(ToolChoiseName: Text; FunctionCall: Interface "AOAI Function")
+    var
+        ToolChoiceTxt: Label '{"type": "function","function": {"name": "%1"}}', Locked = true;
+    begin
+        // Add tool
+        AOAIChatMessages.AddTool(FunctionCall);
+        // Set tool choice to added tool
+        AOAIChatMessages.SetToolChoice(StrSubstNo(ToolChoiceTxt, ToolChoiseName));
     end;
 }
