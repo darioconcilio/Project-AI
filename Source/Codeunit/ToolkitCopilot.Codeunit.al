@@ -57,7 +57,7 @@ codeunit 60102 "Toolkit Copilot"
         AOAIChatCompletionParams.SetPresencePenalty(0);
 
         //Imposta il numero massimo di messaggi da inviare come cronologia dei messaggi
-        AOAIChatCompletionParams.SetMaxHistory(0);
+        AOAIChatCompletionParams.SetMaxHistory(1);
 
         //Imposta la temperatura di campionamento da utilizzare, compresa tra 0 e 2. Una temperatura più elevata aumenta 
         //la probabilità che il token successivo più probabile non venga selezionato. Quando si richiedono dati strutturati, 
@@ -114,6 +114,7 @@ codeunit 60102 "Toolkit Copilot"
         // Add tool
         AOAIChatMessages.AddTool(FunctionCall);
         // Set tool choice to added tool
+        AOAIChatMessages.SetToolInvokePreference("AOAI Tool Invoke Preference"::"Invoke Tools Only"); //TODO Rendere parametrizzabile
         AOAIChatMessages.SetToolChoice(StrSubstNo(ToolChoiceTxt, ToolChoiseName));
     end;
 }

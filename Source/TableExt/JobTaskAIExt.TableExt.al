@@ -11,7 +11,7 @@ tableextension 60102 "Job Task AI Ext" extends "Job Task"
     /// Get the JSON representation of the record.
     /// </summary>
     /// <returns></returns>
-    procedure GetRecordAsJson() JobJsonObject: JsonObject
+    procedure AsJson() JobJsonObject: JsonObject
     var
         JsonUtility: Codeunit "Json Utilities";
         RecRef: RecordRef;
@@ -38,7 +38,7 @@ tableextension 60102 "Job Task AI Ext" extends "Job Task"
         JobPlannigLine.SetRange("Job Task No.", Rec."Job Task No.");
         if JobPlannigLine.FindSet() then
             repeat
-                JobTaskJsonArray.Add(JobPlannigLine.GetRecordAsJson());
+                JobTaskJsonArray.Add(JobPlannigLine.AsJson());
             until JobPlannigLine.Next() = 0;
 
     end;

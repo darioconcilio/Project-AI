@@ -8,7 +8,7 @@ tableextension 60103 "Job Planning Line AI Ext" extends "Job Planning Line"
     /// Get the JSON representation of the record.
     /// </summary>
     /// <returns></returns>
-    procedure GetRecordAsJson() JobJsonObject: JsonObject
+    procedure AsJson() JobJsonObject: JsonObject
     var
         JsonUtility: Codeunit "Json Utilities";
         RecRef: RecordRef;

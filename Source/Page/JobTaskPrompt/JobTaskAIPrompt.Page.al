@@ -33,7 +33,7 @@ page 60104 "Job Task AI Prompt"
             {
                 ShowCaption = false;
                 MultiLine = true;
-                InstructionalText = 'Describe what you want to be done on the selected line. Puoi chiedere di revisionare il budget del task rispetto allo storico oppure di verificare il tempo necessario per il task in base allo storico.';
+                InstructionalText = 'You can specify characteristics in order to search for the most suitable items.';
             }
         }
 
@@ -52,19 +52,6 @@ page 60104 "Job Task AI Prompt"
         //     }
         // }
 
-        /// <summary>
-        /// L'area PromptOptions è l'area delle opzioni di input e accetta solo campi di Option
-        /// </summary>
-        // area(PromptOptions)
-        // {
-        //     field(SimulationBudget; SimulationBudget)
-        //     {
-        //         Caption = 'Simulation Budget';
-        //         ToolTip = 'Specifies if you want taht Copilot simulates budget for job tasks.';
-        //     }
-        // }
-
-
     }
 
     actions
@@ -77,27 +64,27 @@ page 60104 "Job Task AI Prompt"
         /// </summary> 
         area(PromptGuide)
         {
-            action(ReviseBudget)
+            action(SearchChair)
             {
                 ApplicationArea = All;
-                Caption = 'Revise budget';
+                Caption = 'Search chairs blue';
 
                 trigger OnAction()
                 var
-                    PromptSuggestionTxt: Label 'Revise the budget of this task to be in line with the history.';
+                    PromptSuggestionTxt: Label 'Look for the most modern and comfortable chairs in blue.';
                 begin
                     InputProjectDescription := PromptSuggestionTxt;
                 end;
             }
 
-            action(DetailTask)
+            action(SearchTable)
             {
                 ApplicationArea = All;
-                Caption = 'Detail Task';
+                Caption = 'Search a big table';
 
                 trigger OnAction()
                 var
-                    PromptSuggestionTxt: Label 'Approfondisce il task selezionato aggiungento ulteriori sottotask.';
+                    PromptSuggestionTxt: Label 'Look for a large, modern table.';
                 begin
                     InputProjectDescription := PromptSuggestionTxt;
                 end;
@@ -117,7 +104,7 @@ page 60104 "Job Task AI Prompt"
 
                 trigger OnAction()
                 begin
-                    RunGeneration();
+                    RunGeneration(TempCurrentJobTask);
                 end;
             }
             systemaction(OK)
@@ -137,7 +124,7 @@ page 60104 "Job Task AI Prompt"
 
                 trigger OnAction()
                 begin
-                    RunGeneration();
+                    RunGeneration(TempCurrentJobTask);
                 end;
             }
         }
@@ -149,14 +136,13 @@ page 60104 "Job Task AI Prompt"
     //     TempCurrentJob.TransferFields(Job);
     // end;
 
-    local procedure RunGeneration()
+    local procedure RunGeneration(TempJobTask: Record "Job Task" temporary)
     var
-        TempJobTask: Record "Job Task" temporary;
-        ProjectTaskUtilities: Codeunit "Job Task Utilities";
+        ProjectTaskUtilities: Codeunit "Search Item Utilities";
         ProgressDialog: Dialog;
     begin
         ProgressDialog.Open(GeneratingTextDialogTxt);
-        ProjectTaskUtilities.RequestManipulationOnTask(TempJobTask, InputProjectDescription);
+        ProjectTaskUtilities.SearchItemsByTopic(TempJobTask, InputProjectDescription);
 
         // CurrPage.ProjectAIResponseSubpage.Page.ReadFrom(TempJobTask);
     end;
@@ -191,12 +177,16 @@ page 60104 "Job Task AI Prompt"
         //     until TempJobPlanningLine.Next() = 0;
     end;
 
+    procedure SetJobTask(JobTask: Record "Job Task")
+    begin
+        TempCurrentJobTask.Init();
+        TempCurrentJobTask.TransferFields(JobTask);
+    end;
+
     //Variabili
     var
-        TempCurrentJob: Record Job temporary;
-        TempResultJobTask: Record "Job Task" temporary;
-        TempJobPlanningLine: Record "Job Planning Line" temporary;
+        TempCurrentJobTask: Record "Job Task" temporary;
         InputProjectDescription: Text;
         GeneratingTextDialogTxt: Label 'Generating with Copilot...';
-        SimulationBudget: Enum "Simulation Prompt Options";
+
 }

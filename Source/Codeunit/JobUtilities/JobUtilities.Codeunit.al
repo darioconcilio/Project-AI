@@ -62,7 +62,7 @@ codeunit 60103 "Job Utilities"
         SystemPrompt += '6. Rules for numbers: taskNo must be with step 1000, subTaskNo must be step 10 and addtional number on relative taskNo ';
 
         if SimulationOption = SimulationOption::Budget then
-            SystemPrompt += '7. Each subtask must have a budget expressed in hours that simulates the time needed to perform the task itself ';
+            SystemPrompt += '7. Each subtask must have a budget expressed in hours that the time needed to perform the task itself, IMPORTANT it must a realistic value';
 
         SystemPrompt += '**Rule to be observed in all cases: "the returned json must be an array of objects"** ';
         SystemPrompt += '# Example output ';
@@ -158,6 +158,7 @@ codeunit 60103 "Job Utilities"
 
             //Evaluate(TempJobTask.Description, Format(StrSubstNo(StartTxt, GetTextToken(TaskJsonObject, 'description')), 100));
             Evaluate(TempJobTask.Description, Format(StrSubstNo(StartTxt, TaskJsonObject.GetText('description', true)), 100));
+            TempJobTask.Description := TempJobTask.Description.TrimEnd();
 
             TempJobTask."Job Task Type" := TempJobTask."Job Task Type"::"Begin-Total";
             TempJobTask.Insert(false);
@@ -176,6 +177,7 @@ codeunit 60103 "Job Utilities"
 
                     //Evaluate(TempJobTask.Description, Format(GetTextToken(SubTaskJsonObject, 'description'), 100));
                     Evaluate(TempJobTask.Description, Format(SubTaskJsonObject.GetText('description', true), 100));
+                    TempJobTask.Description := TempJobTask.Description.TrimEnd();
 
                     TempJobTask."Job Task Type" := TempJobTask."Job Task Type"::Posting;
                     TempJobTask.Insert(false);

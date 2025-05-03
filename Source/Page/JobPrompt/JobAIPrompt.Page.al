@@ -13,13 +13,14 @@ page 60100 "Job AI Prompt"
 
     PromptMode = Prompt; //Default
     //PromptMode = Content; //attiva la generazione dell'output dell'interazione con Copilot
-    //PromptMode = Generate; //mostra l'output dell'interazione com Copilot
+    //PromptMode = Generate; //mostra l'output dell'interazione con Copilot
 
 
     IsPreview = true; //true = anteprima della funzionalità (indica all'utente che l'esperienza è sperimentale...)
 
     layout
     {
+
         /// <summary>
         /// L'area Prompt è l'input per il copilota e accetta qualsiasi controllo, ad eccezione dei comandi di un Repeater
         /// Questa è la sezione di input che accetta l'input dell'utente per generare il contenuto.
@@ -172,6 +173,7 @@ page 60100 "Job AI Prompt"
                 end;
             }
         }
+
     }
 
     procedure SetJob(Job: Record Job)

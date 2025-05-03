@@ -1,7 +1,6 @@
 {
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Crystal Cave (Sandbox - Test-26)",
             "request": "launch",
@@ -10,9 +9,22 @@
             "environmentName": "Test-26",
             "tenant": "06e27de0-d0ea-4edf-be00-c9cce6a6e614",
             "breakOnError": "All",
+            "startupObjectType": "Page",
+            "startupObjectId": 89,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true
+        },
+        {
+            "name": "AL: Generated Attach request",
+            "request": "attach",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Test-26",
+            "sessionId": 7118,
+            "breakOnNext": "WebClient",
+            "breakOnError": "ExcludeTry",
+            "tenant": "06e27de0-d0ea-4edf-be00-c9cce6a6e614"
         }
     ]
 }

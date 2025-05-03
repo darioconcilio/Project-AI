@@ -59,10 +59,4 @@ codeunit 60104 "Job Tools"
         end;
     end;
 
-    procedure ManipulateJobTask(var JobTask: Record "Job Task")
-    var
-        JobPlanningLine: Record "Job Planning Line";
-    begin
-
-    end;
 }

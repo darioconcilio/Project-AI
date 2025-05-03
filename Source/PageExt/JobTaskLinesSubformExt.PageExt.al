@@ -10,17 +10,17 @@ pageextension 60103 "Job Task Lines Subform Ext" extends "Job Task Lines Subform
         {
             action(GenerateCopilotAction)
             {
-                Caption = 'Manipulate with Copilot';
+                Caption = 'Search items with Copilot';
                 Image = SparkleFilled;
                 Ellipsis = true;
                 ApplicationArea = All;
-                ToolTip = 'Allows the work line to be manipulated with Copilot.';
+                ToolTip = 'Allows to add items in budget task with Copilot.';
 
                 trigger OnAction()
                 var
-                    ProjectTool: Codeunit "Job Tools";
+                    JobTaskTools: Codeunit "Job Task Tools";
                 begin
-                    ProjectTool.ManipulateJobTask(Rec);
+                    JobTaskTools.AddItemToJobTask(Rec);
                     CurrPage.Update(true);
                 end;
             }

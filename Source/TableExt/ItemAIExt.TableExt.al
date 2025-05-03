@@ -1,8 +1,8 @@
 namespace ProjectAI.ProjectAI;
 
-using Microsoft.Projects.Project.Job;
+using Microsoft.Inventory.Item;
 
-tableextension 60101 "Job AI Ext" extends Job
+tableextension 60104 "Item AI Ext." extends Item
 {
     /// <summary>
     /// Get the JSON representation of the record.
