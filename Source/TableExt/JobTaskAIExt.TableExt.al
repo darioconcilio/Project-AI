@@ -30,15 +30,15 @@ tableextension 60102 "Job Task AI Ext" extends "Job Task"
     /// Get the JSON representation of the Job Planning Lines as a JsonArray.
     /// </summary>
     /// <returns></returns>
-    local procedure GetJobPlannignLinesAsJsonArray() JobTaskJsonArray: JsonArray
+    local procedure GetJobPlannignLinesAsJsonArray() JobPlanningLinesJsonArray: JsonArray
     var
         JobPlannigLine: Record "Job Planning Line";
     begin
-        JobPlannigLine.SetRange("Job No.", Rec."Job Task No.");
+        JobPlannigLine.SetRange("Job No.", Rec."Job No.");
         JobPlannigLine.SetRange("Job Task No.", Rec."Job Task No.");
         if JobPlannigLine.FindSet() then
             repeat
-                JobTaskJsonArray.Add(JobPlannigLine.AsJson());
+                JobPlanningLinesJsonArray.Add(JobPlannigLine.AsJson());
             until JobPlannigLine.Next() = 0;
 
     end;

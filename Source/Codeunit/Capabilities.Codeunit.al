@@ -17,15 +17,15 @@ codeunit 60100 "Capabilities"
 
     var
         AISettings: Codeunit "AI Settings";
-        SecretKeyTok: Label '6kRnq16RdiMGnXmhtrBegDZPU4sTr4rDAbJvXIpO47LfM9nVcubIJQQJ99BAAC5RqLJXJ3w3AAABACOGlnZc', Locked = true;
+        SecretKeyTok: Label 'EsbutVRnbffXZJGB7VpcdPnfcurYEEf5ito8oLkJmmySot67jwwSJQQJ99BEACYeBjFXJ3w3AAABACOGxbMq', Locked = true;
         DeploymentTxt: Label 'gpt-4o-mini', Locked = true;
-        EndpointUrlTxt: Label 'https://devlife.openai.azure.com/', Locked = true;
+        EndpointUrlTxt: Label 'https://dev-life-ai.openai.azure.com/', Locked = true;
 
 
     local procedure RegisterCapability()
     var
         CopilotCapability: Codeunit "Copilot Capability";
-        LearnMoreUrlTxt: Label 'https://www.vitadasviluppatore.it/ProjectAI', Locked = true;
+        LearnMoreUrlTxt: Label 'https://www.vitadasviluppatore.it/', Locked = true;
     begin
 
         if not CopilotCapability.IsCapabilityRegistered(Enum::"Copilot Capability"::JobCopilotAI) then

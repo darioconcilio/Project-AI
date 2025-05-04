@@ -358,15 +358,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action GenerateCopilotAction - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 612656320 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2273701615">
-          <source>Lets Copilot generate a draft project based on your description.</source>
+        <trans-unit id="PageExtension 4087887968 - Action 3160464669 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
+          <source>Archive the project to Blob Storage.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job List Ext - Action GenerateCopilotAction - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action ArchiveToBlobStorage - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 612656320 - Action 939458681 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2273701615">
-          <source>Draft with Copilot</source>
+        <trans-unit id="PageExtension 4087887968 - Action 3160464669 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4010542053">
+          <source>Archive to Blob Storage</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job List Ext - Action GenerateCopilotAction - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action ArchiveToBlobStorage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4087887968 - Action 3160464669 - Method 1377591017 - NamedType 2312829604" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 4087887968">
+          <source>Job %1 archived to Blob Storage.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Job No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Job Card Ext. - Action ArchiveToBlobStorage - Method OnAction - NamedType JobArchivedMsg</note>
         </trans-unit>
         <trans-unit id="PageExtension 3008278152 - Action 939458681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2077750279">
           <source>Allows to add items in budget task with Copilot.</source>
