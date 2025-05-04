@@ -51,15 +51,16 @@ codeunit 60107 "Search Item by Func. Call" implements "AOAI Function"
 
     procedure Execute(Arguments: JsonObject): Variant
     var
+        ItemFound: Record Item;
         TempItemFiltered: Record Item temporary;
-        TempFilterItemAttributesBuffer: Record "Filter Item Attributes Buffer" temporary;
-        ItemAttributeManagement: Codeunit "Item Attribute Management";
+        ItemAttributeValue: Record "Item Attribute Value";
+        ItemAttributeValueMapping: Record "Item Attribute Value Mapping";
         Color: Text;
         Token: JsonToken;
         JobNo: Code[20];
         JobTaskNo: Code[20];
         Result: JsonArray;
-        ArributeIdTxt: Label 'Colore', Locked = true;
+        ArributeNameTxt: Label 'Colore', Locked = true;
     begin
         if not Arguments.Get('jobNo', Token) and not Token.IsValue then
             Error('Missing required parameter: jobNo');
@@ -77,13 +78,22 @@ codeunit 60107 "Search Item by Func. Call" implements "AOAI Function"
             Error('Task not found. Job No.: %1, Job Task No.: %2', JobNo, JobTaskNo);
 
         //Prepara il criterio di ricerca per gli articoli
-        TempFilterItemAttributesBuffer.Init();
-        TempFilterItemAttributesBuffer.Attribute := ArributeIdTxt;
-        TempFilterItemAttributesBuffer.Value := Format(Color, 250).Trim();
-        TempFilterItemAttributesBuffer.Insert();
+        ItemAttributeValue.SetRange("Attribute Name", ArributeNameTxt);
+        ItemAttributeValue.SetRange(Value, Color);
+        if ItemAttributeValue.FindFirst() then begin
+            ItemAttributeValueMapping.SetRange("Table ID", Database::Item);
+            ItemAttributeValueMapping.SetRange("Item Attribute ID", ItemAttributeValue."Attribute ID");
+            ItemAttributeValueMapping.SetRange("Item Attribute Value ID", ItemAttributeValue.ID);
+            if ItemAttributeValueMapping.FindSet() then
+                repeat
 
-        //Cerca gli articoli tramite gli attributi
-        ItemAttributeManagement.FindItemsByAttributes(TempFilterItemAttributesBuffer, TempItemFiltered);
+                    if ItemFound.Get(ItemAttributeValueMapping."No.") then
+                        //Aggiungo gli articoli alla lista di risposta convertendoli in JSON
+                        Result.Add(TempItemFiltered.AsJson());
+
+                until ItemAttributeValueMapping.Next() = 0;
+        end else
+            Error('No items attribute found with the specified color: %1', Color);
 
         if TempItemFiltered.FindSet() then
             repeat

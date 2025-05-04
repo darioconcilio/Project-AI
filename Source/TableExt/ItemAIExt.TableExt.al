@@ -21,4 +21,5 @@ tableextension 60104 "Item AI Ext." extends Item
         exit(JobJsonObject);
 
     end;
+
 }

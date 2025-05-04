@@ -8,7 +8,7 @@ codeunit 60108 "Job Task Tools"
 {
     procedure AddItemToJobTask(var JobTask: Record "Job Task")
     var
-        JobTaskAIPrompt: Page "Job Task AI Prompt";
+        JobTaskAIPrompt: Page "Job Task Search Item Prompt";
     begin
 
         JobTaskAIPrompt.SetJobTask(JobTask);

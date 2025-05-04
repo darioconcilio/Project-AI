@@ -2,8 +2,9 @@ namespace ProjectAI.ProjectAI;
 using ProjectAI.Utilities;
 using Microsoft.Projects.Project.Job;
 using Microsoft.Projects.Project.Planning;
+using Microsoft.Inventory.Item;
 
-page 60104 "Job Task AI Prompt"
+page 60104 "Job Task Search Item Prompt"
 {
     PageType = PromptDialog;
     Extensible = false; //Obbligatorio
@@ -41,16 +42,16 @@ page 60104 "Job Task AI Prompt"
         /// L'area Contenuto è l'uscita del copilota e accetta qualsiasi controllo, ad eccezione dei comandi del Repeater
         /// Questa è la sezione di output che visualizza il contenuto generato
         /// </summary>
-        // area(Content)
-        // {
-        //     part(ProjectAIResponseSubpage; "Project AI Response")
-        //     {
-        //         Caption = 'Job Task Lines';
-        //         ShowFilter = false;
-        //         Editable = true;
-        //         Enabled = true;
-        //     }
-        // }
+        area(Content)
+        {
+            part(ItemsFoundResponseSubpage; "Job Task Items Response")
+            {
+                Caption = 'Items found';
+                ShowFilter = false;
+                Editable = true;
+                Enabled = true;
+            }
+        }
 
     }
 
@@ -142,9 +143,9 @@ page 60104 "Job Task AI Prompt"
         ProgressDialog: Dialog;
     begin
         ProgressDialog.Open(GeneratingTextDialogTxt);
-        ProjectTaskUtilities.SearchItemsByTopic(TempJobTask, InputProjectDescription);
+        ProjectTaskUtilities.SearchItemsByTopic(TempJobTask, InputProjectDescription, TempItemFound);
 
-        // CurrPage.ProjectAIResponseSubpage.Page.ReadFrom(TempJobTask);
+        CurrPage.ItemsFoundResponseSubpage.Page.SetRecord(TempItemFound);
     end;
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
@@ -186,6 +187,7 @@ page 60104 "Job Task AI Prompt"
     //Variabili
     var
         TempCurrentJobTask: Record "Job Task" temporary;
+        TempItemFound: Record Item temporary;
         InputProjectDescription: Text;
         GeneratingTextDialogTxt: Label 'Generating with Copilot...';
 

@@ -13,7 +13,7 @@ permissionset 60100 "Project AI"
         page "Project Activity API" = X,
         page "Job AI Response" = X,
         page "Project API" = X,
-        page "Job Task AI Prompt" = X,
+        page "Job Task Search Item Prompt" = X,
         query "Item API" = X,
         codeunit "Job Utilities" = X;
 }

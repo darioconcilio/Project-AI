@@ -2,6 +2,7 @@ namespace ProjectAI.Utilities;
 using ProjectAI.Copilot;
 using ProjectAI.ProjectAI;
 using Microsoft.Projects.Project.Job;
+using Microsoft.Inventory.Item;
 using Microsoft.Projects.Project.Planning;
 using Microsoft.Projects.Resources.Resource;
 using Microsoft.HumanResources.Employee;
@@ -22,12 +23,19 @@ codeunit 60106 "Search Item Utilities"
                         'Important! Use for response only json format';
     end;
 
-    procedure SearchItemsByTopic(var JobTask: Record "Job Task"; UserPrompt: Text)
+    procedure SearchItemsByTopic(var JobTask: Record "Job Task"; UserPrompt: Text; TempItemsFound: Record Item temporary)
     var
         JobTaskFunctionCall: Codeunit "Search Item by Func. Call";
         //Farà parte del prompt, quindi nono va tradotto
         ReferenceLbl: Label 'Reference: Job No: %1, Job Task No: %2', Comment = '%1 = Job No, %2 = Job Task No', Locked = true;
+        ItemsJA: JsonArray;
+        ItemJT: JsonToken;
+        ItemJO: JsonObject;
     begin
+
+        //Init output
+        TempItemsFound.Reset();
+        TempItemsFound.DeleteAll();
 
         //Attivazione delle function call
         ToolkitCopilot.AddFunctionCall('search_items', JobTaskFunctionCall);
@@ -38,7 +46,18 @@ codeunit 60106 "Search Item Utilities"
         //Chiamama al nostro tookit copilot
         Response := ToolkitCopilot.Chat(GetSystemPrompt(), UserPrompt);
 
-        //TODO: Implement the logic to manipulate the JobTask record based on the response from Copilot.
+        ItemsJA.ReadFrom(Response);
+
+        foreach ItemJT in ItemsJA do begin
+
+            ItemJO := ItemJT.AsObject();
+
+            TempItemsFound.Init();
+            Evaluate(TempItemsFound."No.", ItemJO.GetText('no'));
+            Evaluate(TempItemsFound."Description", ItemJO.GetText('description'));
+            TempItemsFound.Insert();
+
+        end;
     end;
 
 }
