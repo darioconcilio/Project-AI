@@ -137,6 +137,12 @@ page 60104 "Job Task Search Item Prompt"
     //     TempCurrentJob.TransferFields(Job);
     // end;
 
+    trigger OnQueryClosePage(CloseAction: Action): Boolean
+    begin
+        if CloseAction = Action::OK then
+            CurrPage.ItemsFoundResponseSubpage.Page.SetSelectionFilter(SelectedItem);
+    end;
+
     local procedure RunGeneration(TempJobTask: Record "Job Task" temporary)
     var
         ProjectTaskUtilities: Codeunit "Search Item Utilities";
@@ -145,38 +151,13 @@ page 60104 "Job Task Search Item Prompt"
         ProgressDialog.Open(GeneratingTextDialogTxt);
         ProjectTaskUtilities.SearchItemsByTopic(TempJobTask, InputProjectDescription, TempItemFound);
 
-        CurrPage.ItemsFoundResponseSubpage.Page.SetRecord(TempItemFound);
+        CurrPage.ItemsFoundResponseSubpage.Page.ReadFrom(TempItemFound);
     end;
 
-    trigger OnQueryClosePage(CloseAction: Action): Boolean
-    begin
-        // if CloseAction = CloseAction::OK then
-        //     CurrPage.ProjectAIResponseSubpage.Page.WriteTo(TempResultJobTask);
-    end;
-
-    procedure WriteTo(var TempJobTaskToWrite: Record "Job Task" temporary; var TempJobPlanningLineToWrite: Record "Job Planning Line" temporary)
-    begin
-
-        // TempResultJobTask.Reset();
-        // if TempResultJobTask.FindSet() then
-        //     repeat
-
-        //         TempJobTaskToWrite.Init();
-        //         TempJobTaskToWrite.TransferFields(TempResultJobTask);
-        //         TempJobTaskToWrite.Insert(false);
-
-        //     until TempResultJobTask.Next() = 0;
-
-        // TempJobPlanningLine.Reset();
-        // if TempJobPlanningLine.FindSet() then
-        //     repeat
-
-        //         TempJobPlanningLineToWrite.Init();
-        //         TempJobPlanningLineToWrite.TransferFields(TempJobPlanningLine);
-        //         TempJobPlanningLineToWrite.Insert(false);
-
-        //     until TempJobPlanningLine.Next() = 0;
-    end;
+    // procedure WriteTo(var SelectedItem: Record Item)
+    // begin
+    //     CurrPage.SetSelectionFilter(SelectedItem);
+    // end;
 
     procedure SetJobTask(JobTask: Record "Job Task")
     begin
@@ -184,9 +165,16 @@ page 60104 "Job Task Search Item Prompt"
         TempCurrentJobTask.TransferFields(JobTask);
     end;
 
+    procedure WriteTo(var TempSelectedItem: Record Item temporary)
+    begin
+        SelectedItem.FindFirst();
+        TempSelectedItem.TransferFields(SelectedItem);
+    end;
+
     //Variabili
     var
         TempCurrentJobTask: Record "Job Task" temporary;
+        SelectedItem: Record Item;
         TempItemFound: Record Item temporary;
         InputProjectDescription: Text;
         GeneratingTextDialogTxt: Label 'Generating with Copilot...';

@@ -153,75 +153,95 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Job AI Response - Control Totaling - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - NamedType 3739731429" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3369391777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Task Items Response</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Items Response - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3369391777 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Description field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Items Response - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3369391777 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Items Response - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3639890527 - NamedType 3739731429" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generating with Copilot...</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - NamedType GeneratingTextDialogTxt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - NamedType GeneratingTextDialogTxt</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Control 1564549987 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Control 599418456 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Control ItemsFoundResponseSubpage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3639890527 - Control 1564549987 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>You can specify characteristics in order to search for the most suitable items.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Control ProjectDescriptionField - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Control ProjectDescriptionField - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 1336118217 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 1336118217 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Search chairs blue</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action SearchChair - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action SearchChair - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 1336118217 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 1336118217 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
           <source>Look for the most modern and comfortable chairs in blue.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action SearchChair - Method OnAction - NamedType PromptSuggestionTxt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action SearchChair - Method OnAction - NamedType PromptSuggestionTxt</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2069929676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2069929676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Search a big table</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action SearchTable - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action SearchTable - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2069929676 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2069929676 - Method 1377591017 - NamedType 1713435780" size-unit="char" translate="yes" xml:space="preserve">
           <source>Look for a large, modern table.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action SearchTable - Method OnAction - NamedType PromptSuggestionTxt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action SearchTable - Method OnAction - NamedType PromptSuggestionTxt</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discard the changes suggested by Copilot.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action Cancel - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action Cancel - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discard it</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action Cancel - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action Cancel - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Extend the details of the selected task.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action Generate - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action Generate - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generate</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action Generate - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action Generate - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply the changes suggested by Copilot.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action OK - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action OK - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Keep it</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action OK - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action OK - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2388911040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2388911040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Regenerate the Project proposed by Dynamics 365 Copilot.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action Regenerate - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action Regenerate - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3286260282 - Action 2388911040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3639890527 - Action 2388911040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Regenerate</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task AI Prompt - Action Regenerate - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Job Task Search Item Prompt - Action Regenerate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3260455244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>projectAPI</source>

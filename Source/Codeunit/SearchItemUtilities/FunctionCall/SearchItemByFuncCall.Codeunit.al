@@ -10,7 +10,6 @@ codeunit 60107 "Search Item by Func. Call" implements "AOAI Function"
 {
     var
         JobTask: Record "Job Task";
-        ProjectTaskUtilities: Codeunit "Search Item Utilities";
 
     procedure GetPrompt(): JsonObject
     var
@@ -89,19 +88,11 @@ codeunit 60107 "Search Item by Func. Call" implements "AOAI Function"
 
                     if ItemFound.Get(ItemAttributeValueMapping."No.") then
                         //Aggiungo gli articoli alla lista di risposta convertendoli in JSON
-                        Result.Add(TempItemFiltered.AsJson());
+                        Result.Add(ItemFound.AsJson());
 
                 until ItemAttributeValueMapping.Next() = 0;
         end else
             Error('No items attribute found with the specified color: %1', Color);
-
-        if TempItemFiltered.FindSet() then
-            repeat
-
-                //Aggiungo gli articoli alla lista di risposta convertendoli in JSON
-                Result.Add(TempItemFiltered.AsJson());
-
-            until TempItemFiltered.Next() = 0;
 
         exit(Result);
     end;

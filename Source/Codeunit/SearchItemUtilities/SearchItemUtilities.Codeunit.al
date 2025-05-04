@@ -23,7 +23,7 @@ codeunit 60106 "Search Item Utilities"
                         'Important! Use for response only json format';
     end;
 
-    procedure SearchItemsByTopic(var JobTask: Record "Job Task"; UserPrompt: Text; TempItemsFound: Record Item temporary)
+    procedure SearchItemsByTopic(var JobTask: Record "Job Task"; UserPrompt: Text; var TempItemsFound: Record Item temporary)
     var
         JobTaskFunctionCall: Codeunit "Search Item by Func. Call";
         //Farà parte del prompt, quindi nono va tradotto
@@ -53,8 +53,8 @@ codeunit 60106 "Search Item Utilities"
             ItemJO := ItemJT.AsObject();
 
             TempItemsFound.Init();
-            Evaluate(TempItemsFound."No.", ItemJO.GetText('no'));
-            Evaluate(TempItemsFound."Description", ItemJO.GetText('description'));
+            Evaluate(TempItemsFound."No.", ItemJO.GetText('No.'));
+            Evaluate(TempItemsFound."Description", ItemJO.GetText('Description'));
             TempItemsFound.Insert();
 
         end;
