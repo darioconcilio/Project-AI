@@ -8,6 +8,7 @@ page 60104 "Job Task Search Item Prompt"
 {
     PageType = PromptDialog;
     Extensible = false; //Obbligatorio
+    Caption = 'Job Task Search Item Prompt';
 
     ApplicationArea = All;
     UsageCategory = Administration;
@@ -69,6 +70,7 @@ page 60104 "Job Task Search Item Prompt"
             {
                 ApplicationArea = All;
                 Caption = 'Search chairs blue';
+                ToolTip = 'Executes the Search chairs blue action.';
 
                 trigger OnAction()
                 var
@@ -82,6 +84,7 @@ page 60104 "Job Task Search Item Prompt"
             {
                 ApplicationArea = All;
                 Caption = 'Search a big table';
+                ToolTip = 'Executes the Search a big table action.';
 
                 trigger OnAction()
                 var

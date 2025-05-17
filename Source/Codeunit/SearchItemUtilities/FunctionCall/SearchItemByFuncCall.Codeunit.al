@@ -51,7 +51,6 @@ codeunit 60107 "Search Item by Func. Call" implements "AOAI Function"
     procedure Execute(Arguments: JsonObject): Variant
     var
         ItemFound: Record Item;
-        TempItemFiltered: Record Item temporary;
         ItemAttributeValue: Record "Item Attribute Value";
         ItemAttributeValueMapping: Record "Item Attribute Value Mapping";
         Color: Text;

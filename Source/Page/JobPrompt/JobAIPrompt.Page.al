@@ -7,6 +7,7 @@ page 60100 "Job AI Prompt"
 {
     PageType = PromptDialog;
     Extensible = false; //Obbligatorio
+    Caption = 'Job AI Prompt';
 
     ApplicationArea = All;
     UsageCategory = Administration;
@@ -82,6 +83,7 @@ page 60100 "Job AI Prompt"
             {
                 ApplicationArea = All;
                 Caption = 'Create a project';
+                ToolTip = 'Executes the Create a project action.';
 
                 trigger OnAction()
                 var
@@ -95,10 +97,13 @@ page 60100 "Job AI Prompt"
 
             group(Examples)
             {
+                Caption = 'Examples';
+
                 action(Gardening)
                 {
                     ApplicationArea = All;
                     Caption = 'Gardening software';
+                    ToolTip = 'Executes the Gardening software action.';
 
                     trigger OnAction()
                     var
@@ -112,6 +117,7 @@ page 60100 "Job AI Prompt"
                 {
                     ApplicationArea = All;
                     Caption = 'Car rental software';
+                    ToolTip = 'Executes the Car rental software action.';
 
                     trigger OnAction()
                     var
@@ -126,6 +132,7 @@ page 60100 "Job AI Prompt"
             {
                 ApplicationArea = All;
                 Caption = 'Organize a workshop';
+                ToolTip = 'Executes the Organize a workshop action.';
 
                 trigger OnAction()
                 var

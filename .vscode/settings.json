@@ -13,5 +13,6 @@
             "shortName": "BcLntr",
             "fileName": "BusinessCentral.LinterCop.dll"
         }
-    ]
+    ],
+    "git.autofetch": "all"
 }

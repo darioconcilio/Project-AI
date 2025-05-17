@@ -25,7 +25,7 @@ page 60102 "Project API"
         {
             repeater(General)
             {
-                field(SystemId; Rec.SystemId)
+                field(systemId; Rec.SystemId)
                 {
                     Caption = 'SystemId';
                 }

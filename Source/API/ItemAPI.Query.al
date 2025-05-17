@@ -10,6 +10,7 @@ query 60100 "Item API"
     EntityName = 'item';
     EntitySetName = 'items';
     QueryType = API;
+    Caption = 'Item API';
 
     DataAccessIntent = ReadOnly;
 

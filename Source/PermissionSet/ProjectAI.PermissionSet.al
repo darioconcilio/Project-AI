@@ -15,5 +15,9 @@ permissionset 60100 "Project AI"
         page "Project API" = X,
         page "Job Task Search Item Prompt" = X,
         query "Item API" = X,
-        codeunit "Job Utilities" = X;
+        codeunit "Job Utilities" = X,
+        codeunit "Blob Storage Managament" = X,
+        codeunit "Install Management" = X,
+        codeunit "Job Task Tools" = X,
+        page "Job Task Items Response" = X;
 }
