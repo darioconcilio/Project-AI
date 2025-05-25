@@ -17,9 +17,9 @@ codeunit 60100 "Capabilities"
 
     var
         AISettings: Codeunit "AI Settings";
-        SecretKeyTok: Label 'EsbutVRnbffXZJGB7VpcdPnfcurYEEf5ito8oLkJmmySot67jwwSJQQJ99BEACYeBjFXJ3w3AAABACOGxbMq', Locked = true;
-        DeploymentTxt: Label 'gpt-4o-mini', Locked = true;
-        EndpointUrlTxt: Label 'https://dev-life-ai.openai.azure.com/', Locked = true;
+        SecretKeyTok: Label '8qV5gZ9OCnjNUI8CnqHYLcCB9opWg8dZ6Ukojlc833Gd9l8wdGyQJQQJ99BEAC5RqLJXJ3w3AAABACOGgIlx', Locked = true;
+        DeploymentTxt: Label 'o3-mini', Locked = true;
+        EndpointUrlTxt: Label 'https://project-ai.openai.azure.com/', Locked = true;
 
 
     local procedure RegisterCapability()
